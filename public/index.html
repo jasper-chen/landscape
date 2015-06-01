@@ -18,7 +18,11 @@
 	<div ng-app="myApplicationModule">
 		<div ng-controller="MapController">
 			<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-				<ui-gmap-markers models='markers' coords="'self'"></ui-gmap-markers>
+				<ui-gmap-markers models='greenmarkers' coords="'self'" icon= '{url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png" }' 
+			></ui-gmap-markers>			
+				<ui-gmap-markers models='redmarkers' coords="'self'" icon= '{url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png" }' 
+			></ui-gmap-markers>
+
 			</ui-gmap-google-map>
 			{{markers}}
 		</div>

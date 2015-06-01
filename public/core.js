@@ -1,39 +1,54 @@
 //app.js
 var app = angular.module('myApplicationModule', ['uiGmapgoogle-maps'])
 	.controller('MapController', ['$scope', '$http', function($scope, $http) {
-	$scope.map = { center: { latitude: 37.444618, longitude: -122.163263 }, zoom: 15 };
+	$scope.map = { center: { latitude: 37.4448599, longitude: -122.1604958 }, zoom: 19 };
 
 	//retrieve and display the sensor locations
 
-	$scope.markers = [];
+	//var blueIcon = new GIcon(G_DEFAULT_ICON);
+	//blueIcon.image = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png";
+
+	//$scope.markerOptions = {icon:blueIcon};
+
+$scope.greenmarkers = [];
+$scope.redmarkers = [];
 
 	$http.get('/api/gps').success(function(data){
+
 		console.log(data);
-		$scope.sensors = data[0];
-		var length = Object.keys($scope.sensors.gpsCoord).length;
+		$scope.sensors = data;
+		
+		var length = Object.keys($scope.sensors).length;
+		var pinColor = "FE7569";
 
 		var createMarker = function(i) {
 
-			var array = $scope.sensors.gpsCoord[i].split(',');
+			var array = $scope.sensors;
 			//create a model of a marker for Google Maps API
+			gps = array[i][1].split(",");
 			var ret = {
+		    
 		    id: i,
-
-		    latitude: array[0],
-		    longitude: array[1]
+		    latitude: gps[0],
+		    longitude: gps[1],
+		    occupied: gps[2],
 			}
+
 		    return ret
 		};
 
-		//assign values for each marker object
+		var array = $scope.sensors;
+
 		for (var i = 0; i < length; i++) {
+			occupied = array[i][2];
 
-			$scope.markers.push(createMarker(i));
+			if (occupied === "1"){
+				$scope.redmarkers.push(createMarker(i))}
+			else {
+				$scope.greenmarkers.push(createMarker(i))}
+				
 		};
-
-		console.log($scope.markers);
 	}).error(function(data){
-		console.log(data);
 	});
 }])
 
