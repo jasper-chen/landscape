@@ -1,0 +1,18 @@
+{
+  "name": "spotfinder",
+  "version": "0.0.1",
+  "description": "Finds parking spot availiability",
+  "main": "./server.js",
+  "dependencies" : {
+    "express" : "4.12.x",
+    "request" : "2.55.x",
+    "xml2js" : "0.4.x",
+    "path" : "0.11.x",
+    "underscore.string" : "3.0.x",
+    "debug" : "2.2.x"
+
+  },
+  "engines" : {
+  	"node" : "0.12.x"
+  }
+}
