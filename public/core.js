@@ -1,10 +1,14 @@
 
 var app = angular.module('myApplicationModule', ['uiGmapgoogle-maps'])
 	.controller('MapController', ['$scope', '$http', function($scope, $http) {
-	$scope.map = { center: { latitude: 37.4448599, longitude: -122.1604958 }, zoom: 19 };
+	$scope.map = { center: { latitude: 37.44496, longitude: -122.161648 }, zoom: 19 };
 
-$scope.greenmarkers = [];
-$scope.redmarkers = [];
+	$scope.greenmarkers = [];
+	$scope.redmarkers = [];
+	function Ctrl($scope)
+		{
+			$scope.date = new Data();
+		};
 
 	$http.get('/api/gps').success(function(data){
 
