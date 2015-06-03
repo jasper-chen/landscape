@@ -1,21 +1,13 @@
-//app.js
+
 var app = angular.module('myApplicationModule', ['uiGmapgoogle-maps'])
 	.controller('MapController', ['$scope', '$http', function($scope, $http) {
 	$scope.map = { center: { latitude: 37.4448599, longitude: -122.1604958 }, zoom: 19 };
-
-	//retrieve and display the sensor locations
-
-	//var blueIcon = new GIcon(G_DEFAULT_ICON);
-	//blueIcon.image = "http://gmaps-samples.googlecode.com/svn/trunk/markers/blue/blank.png";
-
-	//$scope.markerOptions = {icon:blueIcon};
 
 $scope.greenmarkers = [];
 $scope.redmarkers = [];
 
 	$http.get('/api/gps').success(function(data){
 
-		console.log(data);
 		$scope.sensors = data;
 		
 		var length = Object.keys($scope.sensors).length;
