@@ -16,8 +16,8 @@ http://spotfinder-47513.onmodulus.net/
 * Modulus
 
 After installation, do a simple: 
-'''modulus create project'''
-'''modulus deploy'''
+```modulus create project
+modulus deploy ```
  
 ## Motivation
 As part of my summer internship at Progress Software, I developed a Node web app using the Express web framework that pulls from a Parking Sensor API and displays onto a hosted website using Angular.
