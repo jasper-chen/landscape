@@ -3,14 +3,21 @@ Spotfinder is a web app that displays color-coded pins onto a Google Map to indi
 
 http://spotfinder-47513.onmodulus.net/
 
-## System Requirements
+## Dependencies
 
-"express" : "4.12.x",
-    "request" : "2.55.x",
-    "xml2js" : "0.4.x",
-    "path" : "0.11.x",
-    "underscore.string" : "3.0.x",
-    "debug" : "2.2.x"
+* "express" : "4.12.x",
+* "request" : "2.55.x",
+* "xml2js" : "0.4.x",
+* "path" : "0.11.x",
+* "underscore.string" : "3.0.x",
+* "debug" : "2.2.x"
+
+## Applications
+* Modulus
+
+After installation, do a simple: 
+modulus create project
+modulus deploy 
  
 ## Motivation
 As part of my summer internship at Progress Software, I developed a Node web app using the Express web framework that pulls from a Parking Sensor API and displays onto a hosted website using Angular.
