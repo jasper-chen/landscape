@@ -3,6 +3,8 @@ Spotfinder is a web app that displays color-coded pins onto a Google Map to indi
 
 http://spotfinder-47513.onmodulus.net/
 
+![alt tag](https://github.com/jasper-chen/landscape/blob/master/final_result.png)
+
 ## Dependencies
 
 * "express" : "4.12.x" ``` npm install express```
