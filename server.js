@@ -9,7 +9,7 @@ app.use(express.static('./public'));
 
 var coordinatesArray = [];
 
-var APIKEY = '76e253a5c51ecf1dbf17e9ea6b9d6a2f';
+var APIKEY = '';
 
 function occupancyCall(ca, fn) {
 	/* callback to join coordinate and parking sensor occupancy data*/
