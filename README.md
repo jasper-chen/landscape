@@ -28,4 +28,9 @@ As part of my summer internship at Progress Software, I developed a Node web app
 To learn more about the project, such as the thought process and other interesting things, I implore you to check out my blog specifically for my work:
 jasperblogs.wordpress.com
 
+---
+Author: Jasper Chen  
+Project: Summer 2015 Internship at Progress, Palo Alto, California  
+Mentor: Eduardo Pelegri-Llopart  
+
 
